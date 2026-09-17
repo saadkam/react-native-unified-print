@@ -9,13 +9,17 @@
     "build:android": "react-native build-android --extra-params \"--no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a\"",
     "build:ios": "react-native build-ios --mode Debug",
     "web": "vite",
-    "build:web": "vite build"
+    "build:web": "vite build",
+    "windows": "npx @react-native-community/cli run-windows",
+    "test:windows": "jest --config jest.config.windows.js"
   },
   "dependencies": {
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-native": "0.86.2",
-    "react-native-web": "~0.21.2"
+    "react-native": "0.84.0",
+    "react-native-unified-print": "*",
+    "react-native-web": "~0.21.2",
+    "react-native-windows": "0.84.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -28,6 +32,7 @@
     "@react-native/jest-preset": "0.86.2",
     "@react-native/metro-config": "0.86.2",
     "@react-native/typescript-config": "0.86.2",
+    "@rnx-kit/jest-preset": "^0.3.1",
     "@types/react": "^19.2.0",
     "@vitejs/plugin-react": "^5.2.0",
     "react-native-builder-bob": "^0.43.0",
@@ -37,5 +42,12 @@
   },
   "engines": {
     "node": ">= 22.11.0"
+  },
+  "react-native-windows": {
+    "init-windows": {
+      "name": "ReactNativeUnifiedPrintExample",
+      "namespace": "ReactNativeUnifiedPrintExample",
+      "template": "cpp-app"
+    }
   }
 }

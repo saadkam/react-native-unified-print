@@ -29,7 +29,8 @@
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
-    "!**/.*"
+    "!**/.*",
+    "windows"
   ],
   "scripts": {
     "example": "yarn workspace react-native-unified-print-example",
@@ -85,6 +86,7 @@
     "react-native": "0.86.2",
     "react-native-builder-bob": "^0.43.0",
     "react-native-web": "~0.21.2",
+    "react-native-windows": "0.84.0",
     "release-it": "^21.0.1",
     "turbo": "^2.10.8",
     "typescript": "^6.0.3"
@@ -127,7 +129,12 @@
     "android": {
       "javaPackageName": "com.unifiedprint"
     },
-    "includesGeneratedCode": true
+    "includesGeneratedCode": true,
+    "windows": {
+      "namespace": "ReactNativeUnifiedPrintCodegen",
+      "outputDirectory": "windows/ReactNativeUnifiedPrint/codegen",
+      "separateDataTypes": true
+    }
   },
   "prettier": {
     "quoteProps": "consistent",
@@ -185,5 +192,12 @@
       "vite"
     ],
     "version": "0.63.1"
+  },
+  "react-native-windows": {
+    "init-windows": {
+      "name": "ReactNativeUnifiedPrint",
+      "namespace": "ReactNativeUnifiedPrint",
+      "template": "cpp-lib"
+    }
   }
 }
