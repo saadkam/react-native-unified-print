@@ -22,7 +22,7 @@ Due to strict security sandboxing in the modern WinAppSDK / WinUI 3 framework, b
 import { print } from 'react-native-unified-print';
 
 const handlePrint = async () => {
-  const htmlContent = `
+  const htmlContent = '
     <html>
       <head>
         <style>
@@ -36,7 +36,7 @@ const handlePrint = async () => {
         <p>This document is formatted and ready for the print spooler.</p>
       </body>
     </html>
-  ;
+  ;'
 
   try {
     await print(htmlContent);
