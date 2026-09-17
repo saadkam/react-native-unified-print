@@ -36,7 +36,7 @@ const handlePrint = async () => {
         <p>This document is formatted and ready for the print spooler.</p>
       </body>
     </html>
-  `;
+  ;
 
   try {
     await print(htmlContent);
