@@ -18,7 +18,7 @@ yarn add react-native-unified-print
 Due to strict security sandboxing in the modern WinAppSDK / WinUI 3 framework, background processes are restricted from rendering hidden modal dialogs. To bypass these limitations and guarantee a stable print spooler launch, the Windows implementation utilizes the native Win32 OS Shell. It securely writes the injected HTML to the Windows temporary directory and asks the OS to open it, flawlessly triggering the native print dialog routed through the system's default web browser.
 
 #Usage
-```sh
+```javascript
 import { print } from 'react-native-unified-print';
 
 const handlePrint = async () => {
